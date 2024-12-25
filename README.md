@@ -25,11 +25,23 @@ In timing diagram Q0 is changing as soon as the negative edge of clock pulse is 
 
 **PROGRAM**
 
-![Screenshot 2024-12-24 103800](https://github.com/user-attachments/assets/dac324fe-ce64-435f-bb3e-a589258c9526)
+module DE12(input wire clk, output reg [3:0]count);
 
+always @(posedge clk)
 
+if(count==4'b1111)
 
- Developed by: SUBIKSHA K RegisterNumber: 24001100
+count<=4'b0000;
+
+else
+
+count<=count+1;
+
+end 
+
+endmodule
+
+ Developed by: keerthana T RegisterNumber: 24002841
 
 **RTL LOGIC FOR 4 Bit Ripple Counter**
 
